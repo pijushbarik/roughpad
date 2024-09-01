@@ -29,16 +29,16 @@
   </body>
 
   <script>
-      const content = document.querySelector("#content");
+    const content = document.querySelector("#content");
 
-		function loadContent() {
-			const data = localStorage.getItem('contentData');
-			if (data) {
-				content.innerHTML = data;
-			}
-		}
+    function loadContent() {
+      const data = localStorage.getItem("contentData");
+      if (data) {
+        content.innerHTML = data;
+      }
+    }
 
-		window.addEventListener('load', loadContent);
+    window.addEventListener("load", loadContent);
 
     function saveContent() {
       localStorage.setItem("contentData", content.innerHTML);
