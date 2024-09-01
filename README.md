@@ -1,6 +1,14 @@
 # Roughpad
 A very simple HTML page to take quick note.
 
+## Features
+- Automatically saves notes in local storage
+- _New features will be added_
+    - Control dashboard
+    - Manual save/clear storage
+    - Last saved/modified timestamp
+    - Export/import
+
 ## How to run
 
 ### Dev server
@@ -30,11 +38,3 @@ pm2 start ./ecosystem.cofig.js
 ```
 
 This will add the the server as a pm2 process in background and is accssible from `http://localhost:9009`
-
-## Features
-- Automatically saves notes in local storage
-- _New features will be added_
-    - Control dashboard
-    - Manual save/clear storage
-    - Last saved/modified timestamp
-    - Export/import
