@@ -1,0 +1,29 @@
+{
+  "name": "@pijushbarik/roughpad",
+  "version": "1.0.0",
+  "description": "Roughpad (rough notes on the go)",
+  "keywords": [
+    "notepad",
+    "notes",
+    "roughpad",
+    "rough notes",
+    "notes taking app"
+  ],
+  "repository": "https://github.com/pijushbarik/roughpad",
+  "author": "Pijush Barik (https://github.com/pijushbarik)",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "serve": "^14.2.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "source": "src/index.html",
+  "bin": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "serve": "serve -p 9009 ./dist"
+  }
+}

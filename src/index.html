@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Roughpad</title>
+
+    <style>
+      html,
+      body {
+        font-family: monospace;
+        font-size: 1.5rem;
+      }
+
+      body {
+        display: flex;
+        width: calc(100vw - 8px - 8px);
+        height: calc(100vh - 8px - 8px);
+        /* 8 px is default browser margin */
+      }
+
+      #content {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div contenteditable="true" id="content"></div>
+  </body>
+
+  <script>
+      const content = document.querySelector("#content");
+
+		function loadContent() {
+			const data = localStorage.getItem('contentData');
+			if (data) {
+				content.innerHTML = data;
+			}
+		}
+
+		window.addEventListener('load', loadContent);
+
+    function saveContent() {
+      localStorage.setItem("contentData", content.innerHTML);
+    }
+
+    const intervalId = setInterval(saveContent, 1000);
+
+    function cleanUp() {
+      clearInterval(intervalId);
+    }
+
+    window.addEventListener("beforeunload", cleanUp);
+  </script>
+</html>
